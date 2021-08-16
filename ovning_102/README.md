@@ -1,7 +1,7 @@
 # Övning 2 - Parametriska kurvor
 En parametrisk kurva i planet är en kurva som definieras av två ekvationer. T ex gäller för en **ellips** 
 
-![](https://latex.codecogs.com/png.download?%5Cdpi%7B120%7D%20%5Cbg_white%20%5Csmall%20%5Cbegin%7Bcases%7D%20x%3Da%5Ccos%28t%29%20%5C%5C%20y%20%3D%20b%5Csin%28t%29%20%5Cend%7Bcases%7D%20%280%5Cleq%20t%20%5Cleq%202%5Cpi%29)
+![](equations/ellipseq.png)
 
 För att rita kurvan kan man skapa en lista med en massa tal i intervallet som *t* ska ligga inom; därefter så beräknas ett *x*- och ett *y*-värde för varje tal *t* i listan. Talen *a* och *b* är godtyckliga, de kommer att bestämma form och storlek på ellipsen. Om *a* och *b* är lika stora kommer figuren att bli en cirkel (vilket är ett specialfall av en ellips).
 
@@ -12,28 +12,28 @@ Nedanstående bild visar några olika kurvor skapade av parametriska ekvationer,
 Du ska skapa något liknande denna bild med Python och Turtle. Här är de parametriska ekvationerna för respektive graf (ellipsen ovan):
 
 ### Parabel
-![](https://latex.codecogs.com/png.download?%5Cdpi%7B120%7D%20%5Cbg_white%20%5Csmall%20%5Cbegin%7Bcases%7D%20x%3Dat%5E2%20%5C%5C%20y%20%3D%20at%20%5Cend%7Bcases%7D%20%28-%5Cinfty%20%3C%20t%20%3C%20%5Cinfty%29)
+![](equations/parabeleq.png)
 
 Här får man pröva sig fram i vilket intervall *t* ska ligga, det beror på hur stor man vill ha parabeln. I exemplet ovan så är intervallet mellan -2 och 2. En kaströrelse i t ex gravitationsfältet följer en parabel.
 
 ### Hyperbel
-![](https://latex.codecogs.com/png.download?%5Cdpi%7B120%7D%20%5Cbg_white%20%5Csmall%20%5Cbegin%7Bcases%7D%20x%3Da%5Ccdot%5Ccosh%7Bt%7D%20%5C%5C%20y%20%3D%20b%5Ccdot%5Csinh%7Bt%7D%20%5Cend%7Bcases%7D%20%28-%5Cinfty%20%3C%20t%20%3C%20%5Cinfty%29)
+![](equations/hyperbeleq.png)
 
 Funktionerna cosh och sinh är s.k *hyperboliska* funktioner. I Ma4 så visas dessa båda funktioners definitioner och en identitet som kallas den "hyperboliska ettan" (som liknar den "trigonometriska ettan"). Här använder vi dem enbart till att rita grafen som kallas för hyperbel. [Här kan den som är intresserad läsa mer om hyperboliska banor som t ex kometer kan beskriva](https://en.wikipedia.org/wiki/Hyperbolic_trajectory).
 
 ### Lemniskata
-![](https://latex.codecogs.com/png.download?%5Cdpi%7B120%7D%20%5Cbg_white%20%5Csmall%20%5Cbegin%7Bcases%7D%20x%3D%5Cfrac%7Ba%5Ccos%7Bt%7D%7D%7B1+%5Csin%5E%7B2%7Dt%7D%5C%5C%20y%3D%5Cfrac%7Ba%5Ccos%7Bt%7D%5Csin%7Bt%7D%7D%7B1+%5Csin%5E2t%7D%20%5Cend%7Bcases%7D%20%280%5Cleq%20t%20%3C%202%5Cpi%29)
+![](equations/lemniskataeq.png)
 
 Ser ut som en liggande åtta!
 
 ### Asteroid
-![](https://latex.codecogs.com/png.download?%5Cdpi%7B120%7D%20%5Cbg_white%20%5Csmall%20%5Cbegin%7Bcases%7D%20x%3Da%5Ccos%5E3%20t%5C%5C%20y%3Da%5Csin%5E3%20t%20%5Cend%7Bcases%7D%20%280%5Cleq%20t%20%3C%202%5Cpi%29)
+![](equations/asteroideq.png)
 
 Ser lite ut som en stjärna!
 
 
 ### Descartes löv
-![](https://latex.codecogs.com/png.download?%5Cdpi%7B120%7D%20%5Cbg_white%20%5Csmall%20%5Cbegin%7Bcases%7D%20x%3D%5Cfrac%7Bat%7D%7B1+t%5E3%7D%5C%5C%20y%3D%5Cfrac%7Bat%5E2%7D%7B1+t%5E3%7D%20%5Cend%7Bcases%7D%20%28t%5Cneq%20-1%29)
+![](equations/descarteseq.png)
 
 Eftersom *t* måste vara skilt från 1 får man tänka till hur man ska hantera denna parametriska ekvation för att få med hela "lövet" enligt bilden ovan. Ett tips är att göra två intervall, ett som innehåller tal som är mindre än -2 och ett som innehåller tal större än -2. Experimentera med sådana delar.
 
