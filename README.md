@@ -3,10 +3,10 @@
 ## Översikt
 Under denna period, som sträcker sig till att vi startar med den linjära algebran (torde vara någon gång i mitten av september), kommer vi bl a att ägna åt dessa programmeringsövningar. Se länkarna nedan:
 
-* [Övning 1 - Polygoner](ovning_101)
-* [Övning 2 - Parametriska kurvor](ovning_102)
-* [Övning 3 - Numerisk derivering](ovning_103)
-* [Övning 4 - Massor av upprepningar](ovning_104/trial_and_error.ipynb)
+* [Övning 1 - Polygoner](ovning_101) (Lösningsförslag [här](https://gist.github.com/nika-edu/eaf0960dc902596a5480c92ae1fd780a))
+* [Övning 2 - Parametriska kurvor](ovning_102) (Lösningsförslag [här](https://gist.github.com/nika-edu/5a8c91f48366e4ed3f31ae47cf5bee37))
+* [Övning 3 - Numerisk derivering](ovning_103) (Lösningsförslag [här](https://gist.github.com/nika-edu/12014325b43ee06bda7566cfc6c08bfe))
+* [Övning 4 - Massor av upprepningar](ovning_104/trial_and_error.ipynb) (Lösningsförslag [här](https://gist.github.com/nika-edu/534296c9599f36d0888e466a181c2a2a))
 
 ## Ladda ned materialet
 
