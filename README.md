@@ -24,7 +24,7 @@ Om du **inte** har möjlighet att installera program på din dator kommer du att
 Informationen ovan handlade enbart om den första perioden. Vi kommer att ha fler programmeringsperioder (se nedan), och de övningar som blir aktuella då kommer att presenteras på liknande sätt.
 
 ## Bedömning
-Kursen står på "två ben", dels det rent matematiska innehållet och dels tillämpning av detta med hjälp avv programmering. Din lärare att berätta hur kunskapsutvärdering och bedömning kommmer att ske.
+Kursen står på "två ben", dels det rent matematiska innehållet och dels tillämpning av detta med hjälp av programmering. Din lärare att berätta hur kunskapsutvärdering och bedömning kommmer att ske.
 
 
 ## Periodöversikt - Programmeringen
