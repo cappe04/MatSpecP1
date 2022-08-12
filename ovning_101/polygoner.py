@@ -26,7 +26,7 @@ screen.title("Polygoner")
 screen.bgcolor("wheat1")
 screen.setup(900, 600)  # Screensize WxH, in pixels
 
-# Namngivna färger finns på https://cs111.wellesley.edu/labs/lab01/colors
+# Namngivna färger finns på https://cs111.wellesley.edu/labs/lab02/colors
 tim.color('DarkBlue', 'aquamarine')
 
 # Här ritas själva kvadraten
