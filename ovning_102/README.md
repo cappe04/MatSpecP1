@@ -1,6 +1,6 @@
 # Övning 2 - Parametriska kurvor
 En parametrisk kurva i planet är en kurva som definieras av två ekvationer. T ex
-gäller för en **ellips** 
+gäller för en **ellips** att 
 
 ![](equations/ellipseq.png)
 
