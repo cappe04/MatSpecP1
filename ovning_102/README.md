@@ -1,71 +1,71 @@
-# Övning 2 - Parametriska kurvor
-En parametrisk kurva i planet är en kurva som definieras av två ekvationer. T ex
-gäller för en **ellips** 
+# Ã–vning 2 - Parametriska kurvor
+En parametrisk kurva i planet Ã¤r en kurva som definieras av tvÃ¥ ekvationer. T ex
+gÃ¤ller fÃ¶r en **ellips** 
 
 ![](equations/ellipseq.png)
 
-För att rita kurvan kan man skapa en lista med en massa tal i intervallet som *t*
-ska ligga inom; därefter så beräknas ett *x*- och ett *y*-värde för varje tal *t*
-i listan. Talen *a* och *b* är godtyckliga, de kommer att bestämma form och
-storlek på ellipsen. Om *a* och *b* är lika stora kommer figuren att bli en
-cirkel (vilket är ett specialfall av en ellips).
+FÃ¶r att rita kurvan kan man skapa en lista med en massa tal i intervallet som *t*
+ska ligga inom; dÃ¤refter sÃ¥ berÃ¤knas ett *x*- och ett *y*-vÃ¤rde fÃ¶r varje tal *t*
+i listan. Talen *a* och *b* Ã¤r godtyckliga, de kommer att bestÃ¤mma form och
+storlek pÃ¥ ellipsen. Om *a* och *b* Ã¤r lika stora kommer figuren att bli en
+cirkel (vilket Ã¤r ett specialfall av en ellips).
 
-Nedanstående bild visar några olika kurvor skapade av parametriska ekvationer,
-gjorda i Turtle. För att komma igång [finns en startfil](parametriska_kurvor.py)
+NedanstÃ¥ende bild visar nÃ¥gra olika kurvor skapade av parametriska ekvationer,
+gjorda i Turtle. FÃ¶r att komma igÃ¥ng [finns en startfil](parametriska_kurvor.py)
 som ritar ellipsen.
 
 ![](./images/parametric_curves.png)
 
-Du ska skapa något liknande denna bild med Python och Turtle. Här är de
-parametriskaekvationerna för respektive graf (ellipsen ovan):
+Du ska skapa nÃ¥got liknande denna bild med Python och Turtle. HÃ¤r Ã¤r de
+parametriska ekvationerna fÃ¶r respektive graf (ellipsen ovan):
 
 ### Parabel
 ![](equations/parabeleq.png)
 
-Här får man pröva sig fram i vilket intervall *t* ska ligga, det beror på hur
-stor man vill ha parabeln. I exemplet ovan så är intervallet mellan -2 och 2.
-En kaströrelse i t ex gravitationsfältet följer en parabel.
+HÃ¤r fÃ¥r man prÃ¶va sig fram i vilket intervall *t* ska ligga, det beror pÃ¥ hur
+stor man vill ha parabeln. I exemplet ovan sÃ¥ Ã¤r intervallet mellan -2 och 2.
+En kastrÃ¶relse i t ex gravitationsfÃ¤ltet fÃ¶ljer en parabel.
 
 ### Hyperbel
 ![](equations/hyperbeleq.png)
 
-Funktionerna cosh och sinh är s.k *hyperboliska* funktioner. I Ma4 så visas dessa
-båda funktioners definitioner och en identitet som kallas den "hyperboliska
-ettan" (som liknar den "trigonometriska ettan"). Här använder vi dem enbart till
-att rita grafen som kallas för hyperbel.
-[Här kan den som är intresserad läsa mer om hyperboliska banor som t ex kometer kan beskriva](https://en.wikipedia.org/wiki/Hyperbolic_trajectory).
+Funktionerna cosh och sinh Ã¤r s.k *hyperboliska* funktioner. I Ma4 sÃ¥ visas dessa
+bÃ¥da funktioners definitioner och en identitet som kallas den "hyperboliska
+ettan" (som liknar den "trigonometriska ettan"). HÃ¤r anvÃ¤nder vi dem enbart till
+att rita grafen som kallas fÃ¶r hyperbel.
+[HÃ¤r kan den som Ã¤r intresserad lÃ¤sa mer om hyperboliska banor som t ex kometer kan beskriva](https://en.wikipedia.org/wiki/Hyperbolic_trajectory).
 
 ### Lemniskata
 ![](equations/lemniskataeq.png)
 
-Ser ut som en liggande åtta!
+Ser ut som en liggande Ã¥tta!
 
 ### Asteroid
 ![](equations/asteroideq.png)
 
-Ser lite ut som en stjärna!
+Ser lite ut som en stjÃ¤rna!
 
 
-### Descartes löv
+### Descartes lÃ¶v
 ![](equations/descarteseq.png)
 
-Eftersom *t* måste vara skilt från 1 får man tänka till hur man ska hantera denna
-parametriska ekvation för att få med hela "lövet" enligt bilden ovan. Ett tips är
-att göra två intervall, ett som innehåller tal som är mindre än -2 och ett som
-innehåller tal större än -2. Experimentera med sådana delar.
+Eftersom *t* mÃ¥ste vara skilt frÃ¥n 1 fÃ¥r man tÃ¤nka till hur man ska hantera denna
+parametriska ekvation fÃ¶r att fÃ¥ med hela "lÃ¶vet" enligt bilden ovan. Ett tips Ã¤r
+att gÃ¶ra tvÃ¥ intervall, ett som innehÃ¥ller tal som Ã¤r mindre Ã¤n -2 och ett som
+innehÃ¥ller tal stÃ¶rre Ã¤n -2. Experimentera med sÃ¥dana delar.
 
-Man märker även att vissa delar i lövet går väldigt snabbt för datorn att rita,
-medan andra går betydligt långsammare. Det är inte enbart för att det är tunga
-beräkningar för datorn, utan mest för att hastigheten ligger i de parametriska
+Man mÃ¤rker Ã¤ven att vissa delar i lÃ¶vet gÃ¥r vÃ¤ldigt snabbt fÃ¶r datorn att rita,
+medan andra gÃ¥r betydligt lÃ¥ngsammare. Det Ã¤r inte enbart fÃ¶r att det Ã¤r tunga
+berÃ¤kningar fÃ¶r datorn, utan mest fÃ¶r att hastigheten ligger i de parametriska
 kurvornas natur. Om vi
 [plottar derivatan i *x*-led](https://www.wolframalpha.com/input/?i=differentiate+t%2F%281%2Bt%5E3%29)
-så ser vi att den ligger nära noll för stora belopp på negativa tal och även
-stora positiva tal (gör gärna motsvarande plot i *y*-led). Derivatan är ett
-mått på hastigheten, så där den ligger nära noll kommer också hastigheten på
-uppritningen med denna metod att göra det.
+sÃ¥ ser vi att den ligger nÃ¤ra noll fÃ¶r stora belopp pÃ¥ negativa tal och Ã¤ven
+stora positiva tal (gÃ¶r gÃ¤rna motsvarande plot i *y*-led). Derivatan Ã¤r ett
+mÃ¥tt pÃ¥ hastigheten, sÃ¥ dÃ¤r den ligger nÃ¤ra noll kommer ocksÃ¥ hastigheten pÃ¥
+uppritningen med denna metod att gÃ¶ra det.
  
-Rent konkret betyder det att för ett och samma intervall (t ex om *t* ökar med
-0.1)så kommer linjen att bli olika lång beroende på var i intervallet vi är.
-När derivatan närmar sig noll kommer också längden på den del av linjen som
-ritas i intervallet att närma sig noll, därmed så går det långsammare. Detta
-gäller för alla kurvor som ritas genom parametriska ekvationer.
+Rent konkret betyder det att fÃ¶r ett och samma intervall (t ex om *t* Ã¶kar med
+0.1)sÃ¥ kommer linjen att bli olika lÃ¥ng beroende pÃ¥ var i intervallet vi Ã¤r.
+NÃ¤r derivatan nÃ¤rmar sig noll kommer ocksÃ¥ lÃ¤ngden pÃ¥ den del av linjen som
+ritas i intervallet att nÃ¤rma sig noll, dÃ¤rmed sÃ¥ gÃ¥r det lÃ¥ngsammare. Detta
+gÃ¤ller fÃ¶r alla kurvor som ritas genom parametriska ekvationer.
