@@ -6,7 +6,6 @@ representerar.
 
 $$
 \frac{d}{dx}f(x)=\lim_{h\rightarrow 0} \frac{f(x+h)-f(x)}{h}
-\tag{Derivatans definition}
 $$
 
 I Python finns ingen inbyggd funktionalitet att derivera funktioner, det får man
@@ -29,7 +28,7 @@ lagringsmediet.
    Pröva en exponentialfunktion, en potensfunktion (t ex en kubikrot) och en
    logaritmisk funktion.
 
-### Newton-Rapshons metod för ekvationslösning
+## Newton-Rapshons metod för ekvationslösning
 
 Derivata är användbart i många sammanhang. Ett sådant sammanhang du kanske inte
 kommit kontakt med ännu är att lösa ekvationer numeriskt. Det finns en metod som
@@ -43,14 +42,17 @@ heter _Newton-Raphsons metod_. Den går till så att man
   på lösningen. Så fortsätter man tills värdet inte förändras särskilt mycket.
 
 Om en ekvation är skriven på formen
-_f(x)=0_,
+$f(x)=0$,
 så kan man få ut en approximativ lösning med Newton-Raphsons, vars formel kan
-skrivas ![eq](equations/newtonraphson.png)
-_Newton-Raphsons formel_
+skrivas
 
-Här är ![eq](equations/xn.png) gissningen och ![eq](equations/xn1.png) är det
+$$
+x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}
+$$
+
+Här är $x_n$ gissningen och $x_{n+1}$ är det
 beräknade värde som kommer att bli bättre än gissningen. Sedan sätts detta
-beräknade värde in som ett nytt ![eq](equations/xn.png), varpå man får ut ett
+beräknade värde in som ett nytt $x_n$, varpå man får ut ett
 ännu bättre värde på lösningen. Så fortsätter man som sagt till det att värdet
 inte förändras så mycket, man säger att formeln **itereras**.
 
@@ -60,28 +62,35 @@ gissningar. Numerisk lösning är inte något vi ska fördjupa oss i, men som
 vi kommer att se i programmeringsövningen nedan att vissa gissningar inte
 alls kommer att fungera.
 
-3.  Utgå från filen [newton-raphson.py](newton-raphson.py) och implementera
-    formeln för Newton-Raphsons metod för en funktion _f(x)_. Skriv in formeln
-    i en `for`-loop som gör att den kan itereras ett godtyckligt antal gånger.
-    Lös ekvationerna nedan och få fram respektive lösning(ar) med fem korrekta
-    decimaler (du måste pröva hur många iterationer som ska göras).
+3. Utgå från filen [newton-raphson.py](newton-raphson.py) och implementera
+   formeln för Newton-Raphsons metod för en funktion $f$. Skriv in formeln
+   i en `for`-loop som gör att den kan itereras ett godtyckligt antal gånger.
+   Lös ekvationerna nedan och få fram respektive lösning(ar) med fem korrekta
+   decimaler (du måste pröva hur många iterationer som ska göras).
 
-        **a**. ![eq](equations/eqa.png) med ![eq](equations/x01.png). Som du
-        ser i filen så är modulen `math` importerad som `m`, och då erhålls den
-        naturliga logaritmen ![eq](equations/lnx.png) som `m.log(x)`.
+**a**.
+$\ln x+x^2=0$ med $x_0=0$
 
-        **b** ![eq](equations/eqb.png). Även här kan ![eq](equations/x01.png)
-        användas som startvärde. Logaritmen med basen 10 erhålls med `m.log10(x)`
+Som du ser i filen så är modulen `math` importerad som `m`, och då erhålls den
+naturliga logaritmen $\ln x$ som `m.log(x)`.
 
-        **c**![eq](equations/eqc.png), pröva även här ![eq](equations/x01.png).
+**b**.
+$3\lg x-2.5=0$. Även här kan $x_0=1$
+användas som startvärde. Logaritmen med basen 10 erhålls med `m.log10(x)`
 
-        **d** ![eq](equations/eqd.png). Rita den aktuella funktionsgrafen och
-        hitta lämpliga värden som kan användas som gissning.
+**c**.
+$x^2-2x=0$, pröva även här $x_0=1$.
 
-        **e** ![eq](equations/eqe.png). Hitta lämpliga startvärden grafiskt.
+**d**.
+$x^2+(\sqrt{10}-\sqrt{5})x-5\sqrt{2}=0$.
+Rita den aktuella funktionsgrafen och hitta lämpliga värden som kan användas
+som gissning.
 
-        **f** ![eq](equations/eqf.png). Denna ekvation har förstås en lösning
-        ![eq](equations/x3m1.png), men det finns två andra lösningar som är
-        komplexa. För att få en komplex lösning måste gissningen anges som ett
-        komplext tal, ansätt ![eq](equations/x01mi.png). I Python anges detta
-        tal som `1-1j`. Kan du även hitta den tredje lösningen?
+**e**.
+$\ln p=p-2$. Hitta lämpliga startvärden grafiskt.
+
+**f**.
+$x^3=-1$. Denna ekvation har förstås en lösning $x=-1$, men det finns två
+andra lösningar som är komplexa. För att få en komplex lösning måste
+gissningen anges som ett komplext tal, ansätt $x_0=1-i$. I Python anges
+detta tal som `1-1j`. Kan du även hitta den tredje lösningen?
