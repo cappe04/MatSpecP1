@@ -1,11 +1,13 @@
 # Övning 3 - Numerisk derivering
 
-Du känner säkert till derivatans definition. För en given funktion *f* och ett
-givet värde på *x* ger denna lutningen i punkten *x* på den graf som *f(x)*
+Du känner säkert till derivatans definition. För en given funktion $f$ och ett
+givet värde på $x$ ger denna lutningen i punkten $x$ på den graf som $f(x)$
 representerar.
 
-![Derivatans definition](equations/derdef.png)
-*Derivatans definition*
+$$
+\frac{d}{dx}f(x)=\lim_{h\rightarrow 0} \frac{f(x+h)-f(x)}{h}
+\tag{Derivatans definition}
+$$
 
 I Python finns ingen inbyggd funktionalitet att derivera funktioner, det får man
 skriva själv. Till den här övningen tillhandahåller jag en sådan funktion i filen
@@ -19,32 +21,32 @@ lagringsmediet.
 ## Uppgifter
 
 1. Pröva att ändra deriveringspunkten på den givna funktionen i filen
-[newton-raphson.py](newton-raphson.py). Kontrollera att resultatet stämmer med
-hjälp av deriveringsregler. Pröva också att ändra värdet på *h* (det är ju den
-som ska gå mot noll enligt definitionen).
+   [newton-raphson.py](newton-raphson.py). Kontrollera att resultatet stämmer med
+   hjälp av deriveringsregler. Pröva också att ändra värdet på _h_ (det är ju den
+   som ska gå mot noll enligt definitionen).
 
 2. Pröva att ändra funktionen till andra funktioner (en i taget, naturligtvis).
-Pröva en exponentialfunktion, en potensfunktion (t ex en kubikrot) och en
-logaritmisk funktion.
+   Pröva en exponentialfunktion, en potensfunktion (t ex en kubikrot) och en
+   logaritmisk funktion.
 
 ### Newton-Rapshons metod för ekvationslösning
 
 Derivata är användbart i många sammanhang. Ett sådant sammanhang du kanske inte
 kommit kontakt med ännu är att lösa ekvationer numeriskt. Det finns en metod som
-heter *Newton-Raphsons metod*. Den går till så att man 
+heter _Newton-Raphsons metod_. Den går till så att man
 
-* Gissar ett värde på en funktions nollställe
+- Gissar ett värde på en funktions nollställe
 
-* Detta värde sätts in i en metodens formel, varpå man får ut ett bättre värde
+- Detta värde sätts in i en metodens formel, varpå man får ut ett bättre värde
 
-* Detta bättre värde sätts in i formeln igen, vilket ger ett ännu bättre värde
-på lösningen. Så fortsätter man tills värdet inte förändras särskilt mycket.
+- Detta bättre värde sätts in i formeln igen, vilket ger ett ännu bättre värde
+  på lösningen. Så fortsätter man tills värdet inte förändras särskilt mycket.
 
 Om en ekvation är skriven på formen
-*f(x)=0*,
+_f(x)=0_,
 så kan man få ut en approximativ lösning med Newton-Raphsons, vars formel kan
 skrivas ![eq](equations/newtonraphson.png)
-*Newton-Raphsons formel*
+_Newton-Raphsons formel_
 
 Här är ![eq](equations/xn.png) gissningen och ![eq](equations/xn1.png) är det
 beräknade värde som kommer att bli bättre än gissningen. Sedan sätts detta
@@ -58,28 +60,28 @@ gissningar. Numerisk lösning är inte något vi ska fördjupa oss i, men som
 vi kommer att se i programmeringsövningen nedan att vissa gissningar inte
 alls kommer att fungera.
 
-3. Utgå från filen [newton-raphson.py](newton-raphson.py) och implementera
-formeln för Newton-Raphsons metod för en funktion *f(x)*. Skriv in formeln
-i en `for`-loop som gör att den kan itereras ett godtyckligt antal gånger.
-Lös ekvationerna nedan och få fram respektive lösning(ar) med fem korrekta
-decimaler (du måste pröva hur många iterationer som ska göras).
-   
-    **a**. ![eq](equations/eqa.png) med ![eq](equations/x01.png). Som du
-	ser i filen så är modulen `math` importerad som `m`, och då erhålls den
-	naturliga logaritmen ![eq](equations/lnx.png) som `m.log(x)`.
-    
-    **b** ![eq](equations/eqb.png). Även här kan ![eq](equations/x01.png)
-	användas som startvärde. Logaritmen med basen 10 erhålls med `m.log10(x)`
+3.  Utgå från filen [newton-raphson.py](newton-raphson.py) och implementera
+    formeln för Newton-Raphsons metod för en funktion _f(x)_. Skriv in formeln
+    i en `for`-loop som gör att den kan itereras ett godtyckligt antal gånger.
+    Lös ekvationerna nedan och få fram respektive lösning(ar) med fem korrekta
+    decimaler (du måste pröva hur många iterationer som ska göras).
 
-    **c**![eq](equations/eqc.png), pröva även här ![eq](equations/x01.png).
+        **a**. ![eq](equations/eqa.png) med ![eq](equations/x01.png). Som du
+        ser i filen så är modulen `math` importerad som `m`, och då erhålls den
+        naturliga logaritmen ![eq](equations/lnx.png) som `m.log(x)`.
 
-    **d** ![eq](equations/eqd.png). Rita den aktuella funktionsgrafen och
-	hitta lämpliga värden som kan användas som gissning.
+        **b** ![eq](equations/eqb.png). Även här kan ![eq](equations/x01.png)
+        användas som startvärde. Logaritmen med basen 10 erhålls med `m.log10(x)`
 
-    **e** ![eq](equations/eqe.png). Hitta lämpliga startvärden grafiskt.
+        **c**![eq](equations/eqc.png), pröva även här ![eq](equations/x01.png).
 
-    **f** ![eq](equations/eqf.png). Denna ekvation har förstås en lösning
-	![eq](equations/x3m1.png), men det finns två andra lösningar som är
-	komplexa. För att få en komplex lösning måste gissningen anges som ett
-	komplext tal, ansätt ![eq](equations/x01mi.png). I Python anges detta
-	tal som `1-1j`. Kan du även hitta den tredje lösningen?
+        **d** ![eq](equations/eqd.png). Rita den aktuella funktionsgrafen och
+        hitta lämpliga värden som kan användas som gissning.
+
+        **e** ![eq](equations/eqe.png). Hitta lämpliga startvärden grafiskt.
+
+        **f** ![eq](equations/eqf.png). Denna ekvation har förstås en lösning
+        ![eq](equations/x3m1.png), men det finns två andra lösningar som är
+        komplexa. För att få en komplex lösning måste gissningen anges som ett
+        komplext tal, ansätt ![eq](equations/x01mi.png). I Python anges detta
+        tal som `1-1j`. Kan du även hitta den tredje lösningen?
