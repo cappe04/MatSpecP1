@@ -110,7 +110,7 @@ $$
 (t \neq -1)
 $$
 
-Eftersom $ t $ måste vara skilt från 1 får man tänka till hur man ska hantera denna
+Eftersom $t$ måste vara skilt från 1 får man tänka till hur man ska hantera denna
 parametriska ekvation för att få med hela "lövet" enligt bilden ovan. Ett tips är
 att göra två intervall, ett som innehåller tal som är mindre än -2 och ett som
 innehåller tal större än -2. Experimentera med sådana delar.
