@@ -42,7 +42,7 @@ heter _Newton-Raphsons metod_. Den går till så att man
   på lösningen. Så fortsätter man tills värdet inte förändras särskilt mycket.
 
 Om en ekvation är skriven på formen
-$f(x)=0$,
+$f(x)= 0$,
 så kan man få ut en approximativ lösning med Newton-Raphsons, vars formel kan
 skrivas
 
