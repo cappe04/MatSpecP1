@@ -1,60 +1,27 @@
 import turtle as t
 import numpy as np
-from operator import add
-FONTSIZE = 24
+from operator import add, mul
 
+RANGE_STAND = np.arange(-2, 2, 0.025)
+RANGE_TRIG = np.arange(0, 2*np.pi, 0.025)
+RANGE_LEAF = np.arange(-10, 7, 0.025)
 
-def calc_ellipse(t, origo):
-    """
-    Paramater: Ett tal och en tupel (koordinat)
-    Returnerar: En koordinat
-    Kommentar: Returkoordinaterna ligger på en ellips
-    """
-    # a och b styr storlek och form på ellipsen
-    a = 100
-    b = 50
-    x = a*np.cos(t)
-    y = b*np.sin(t)
+parabel = lambda t: [t**2, t]
+hyperbel = lambda t: [np.cosh(t), np.sinh(t)]
+lemniskata = lambda t: [np.cos(t)/(1+np.sin(t)**2), np.cos(t)*np.sin(t)/(1+np.sin(t)**2)]
+asteriod = lambda t: [np.cos(t)**3, np.sin(t)**3]
+descartes = lambda t: [t/(1+t**3), t**2/(1+t**3)]
 
-    # Exempel på hur returen fungerar:
-    # Om x = 100, y = 200 och origo = (30, -50)
-    # så returneras (130, 150)
-    return list(map(add, (x, y), origo))
-
-
-def plot_ellipse(origo):
-    """
-    Parameter: En tupel (koordinat), som anger centrum för ellipsen
-    Returnerar: Inget
-    Kommentar: Proceduren ritar ellipsen, koordinater beräknas i
-    funktionen calc_ellips
-    """
-    tim.color("Red")
+counter = 0
+def plot_func(func, range, origo, ab):
+    function = lambda t: list(map(add, map(mul, func(t), ab), origo))
+    global counter; tim.color(["Red", "Pink", "Blue", "Yellow", "Green"][counter%5]); counter += 1
     tim.penup()
-    tim.goto(calc_ellipse(0, origo))  # Gå till första punkten på ellipsen
+    tim.goto(function(range[0]))
     tim.pendown()
+    for t in range:
+        tim.goto(function(t))
 
-    # Skapar en lista med tal mellan 0 och 2*pi med avståndet 0.025, dvs
-    # 0, 0.025, 0.050, ... ,6.275
-    t = np.arange(0, 2*np.pi, 0.025)
-
-    for i in t:  # Ritar ellipsen
-        tim.goto(calc_ellipse(i, origo))
-
-
-def print_text(text, origo):
-    """
-    Parametrar: En text och en tupel (koordinat) som anger centrum för texten
-    Returnerar: Inget
-    Kommentar: Procedur som skriver ut texten i ellipsen
-    """
-    tim.penup()
-    tim.color("white")
-    tim.goto(origo[0], origo[1] - FONTSIZE/2)
-    tim.write(text, font=("Arial", FONTSIZE, "normal"), align="center")
-
-
-### Huvudprogram ###
 tim = t.Turtle()
 tim.hideturtle()
 tim.pensize(6)
@@ -67,7 +34,11 @@ screen.setup(900, 600)
 screen.title("Några parametriska kurvor")
 
 origo = (-300, 150)  # Runt vilken punkt plotten ska vara centererad
-plot_ellipse(origo)  # Plottar ellipsen
-print_text("Ellips", origo)  # Skriver texten i ellipsen
+plot_func(parabel, RANGE_STAND, origo, (50, 50))
+plot_func(hyperbel, RANGE_STAND, origo, (50, 50))
+plot_func(lemniskata, RANGE_TRIG, origo, (50, 50))
+plot_func(asteriod, RANGE_TRIG, origo, (50, 50))
+plot_func(descartes, RANGE_LEAF, origo, (50, 50))
+
 
 screen.exitonclick()
